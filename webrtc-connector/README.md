@@ -8,7 +8,7 @@ test src
 
 mjpeg http src
 
-    $ gst-launch-1.0 souphttpsrc location=http://127.0.0.1:8080/mjpeg is-live=true ! multipartdemux ! image/jpeg,width=640,height=320,framerate=10/1 ! jpegdec ! videorate ! video/x-raw,framerate=5/1 ! videoconvert ! video/x-raw,format=I420 ! vp8enc error-resilient=partitions keyframe-max-dist=10 auto-alt-ref=true cpu-used=5 deadline=1 ! rtpvp8pay ! udpsink host=127.0.0.1 port=5004
+    $ gst-launch-1.0 souphttpsrc location=http://192.168.100.65:81/stream is-live=true ! multipartdemux ! image/jpeg,width=640,height=320,framerate=10/1 ! jpegdec ! videorate ! video/x-raw,framerate=5/1 ! videoconvert ! video/x-raw,format=I420 ! vp8enc error-resilient=partitions keyframe-max-dist=10 auto-alt-ref=true cpu-used=5 deadline=1 ! rtpvp8pay ! udpsink host=127.0.0.1 port=5004
 
 uvc camera src
 
