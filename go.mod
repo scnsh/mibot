@@ -1,5 +1,8 @@
-module github.com/atotto/mibot
+module github/scnsh/mibot
 
-go 1.13
+go 1.14
 
-require github.com/go-ble/ble v0.0.0-20200407180624-067514cd6e24
+require (
+	github.com/eclipse/paho.mqtt.golang v1.2.0
+	golang.org/x/net v0.0.0-20200707034311-ab3426394381 // indirect
+)
